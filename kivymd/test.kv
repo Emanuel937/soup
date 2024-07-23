@@ -1,0 +1,34 @@
+BoxLayout:
+    orientation:"vertical" 
+    MDTopAppBar:
+        type: "small"
+        MDTopAppBarTitle:
+            text: "AppBar Center-aligned"
+            color:"black"
+        MDTopAppBarTrailingButtonContainer:
+            MDActionTopAppBarButton:
+                icon: "phone"
+                MDBadge: 
+                    id:mdbadge
+                    text: "12"
+            MDActionTopAppBarButton:
+                icon: "cog"
+            MDActionTopAppBarButton:
+                icon: "dots-vertical"
+    
+    MDBoxLayout:
+        orientation:"vertical"
+
+    #:import MDActionBottomAppBarButton kivymd.uix.appbar.MDActionBottomAppBarButton
+    MDBottomAppBar:
+        id: bottom_appbar
+        action_items:
+            [
+            MDActionBottomAppBarButton(icon="gmail"),
+            MDActionBottomAppBarButton(icon="bookmark"),
+            ]
+
+        MDFabBottomAppBarButton:
+            icon: "plus"
+            on_release: app.change_actions_items()
+     
